@@ -10,7 +10,7 @@ const SubmitBtn: React.FC<{
   return (
     <button
       disabled={loading}
-      className={`h-[54px] w-full rounded-sm bg-primary font-bold text-white ${loading && "cursor-wait"}`}
+      className={`h-[54px] w-full rounded-sm bg-primary font-bold text-white ${loading && "cursor-not-allowed"}`}
     >
       {loading ? t("submitted") : t("send")}
     </button>

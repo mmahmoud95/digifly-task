@@ -8,7 +8,7 @@ Follow these steps to download and run the project locally:
 
 ## Prerequisites
 
-- Ensure you have the following installed on your machine:
+- Ensure you have the following installed on your machine: 
   - [Node.js](https://nodejs.org/) (version 16 or higher recommended)
   - [Yarn](https://yarnpkg.com/) or npm
 

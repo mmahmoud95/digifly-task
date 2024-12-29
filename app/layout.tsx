@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Poppins, Tajawal } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/ui/Footer";
-import StoreProvider from "./StoreProvider";
 import Navbar from "./components/ui/Navbar";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
+import StoreProvider from "./lib/store/StoreProvider";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const poppins: NextFontWithVariable = Poppins({
