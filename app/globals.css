@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --black-black-600: #666;
+  --black-black-50: #f2f2f2;
+  --black-black-20: #fafafa;
+  --black-black-400: #999;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/*navbar*/
+nav ul li {
+  padding: 16px;
+}
+@media (max-width: 1024px) {
+  nav ul li {
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+/*start tooltip*/
+.leaflet-tooltip {
+  padding: 0px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  left: 0px !important;
+}
+.leaflet-tooltip-top:before {
+  bottom: 0;
+  margin-bottom: -16px;
+  border-top-color: #6d5cbc !important;
+}
+
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+  left: 65% !important;
+  margin-left: 5px;
+}
+.leaflet-tooltip:before {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -40px !important;
+  left: 60% !important;
+  /* transform: translateX(-50%) rotate(-10deg) !important; */
+  width: 0 !important;
+  height: 0 !important;
+  /* border-left: 38px solid #0000 !important; */
+  border-right: 41px solid #0000 !important;
+  border-top: 50px solid #6d5bbe !important;
+}
+
+/*End tooltip*/
+
+/*start Text Editor toolbar*/
+.toolbar {
+  display: flex;
+  width: 100%;
+  background: #f8f7fc;
+  border: 1px solid rgba(109, 92, 188, 0.05);
+  border-bottom: 0;
+}
+
+.toolbar > div {
+  display: flex;
+  flex: 1;
+}
+
+.toolbar button {
+  flex: 1;
+  padding: 16px 0;
+  border-right: 0.5px solid rgba(109, 92, 188, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar button:last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar > div {
+    border-bottom: 0.5px solid rgba(109, 92, 188, 0.05);
+  }
+
+  .toolbar > div:last-child {
+    border-bottom: none;
+  }
+  .toolbar button {
+    padding: 8px 0;
+  }
+}
+
+/*end Text Editor toolbar*/
